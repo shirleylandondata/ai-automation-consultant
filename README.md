@@ -148,8 +148,6 @@ The returned response ID is saved and supplied with the next request, allowing t
 
 ## Prompt Engineering and Testing
 
-## Prompt Engineering and Testing
-
 One of the most important findings during development was that defining an AI role was not enough to produce the desired interaction.
 
 During initial testing, the instruction to "ask focused questions" produced a questionnaire-style response containing multiple discovery questions in a single turn.
