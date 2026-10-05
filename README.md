@@ -148,26 +148,24 @@ The returned response ID is saved and supplied with the next request, allowing t
 
 ## Prompt Engineering and Testing
 
+## Prompt Engineering and Testing
+
 One of the most important findings during development was that defining an AI role was not enough to produce the desired interaction.
 
-An early instruction told the consultant to:
+During initial testing, the instruction to "ask focused questions" produced a questionnaire-style response containing multiple discovery questions in a single turn.
 
-> Ask focused questions.
+Rather than treating this as an API failure, I treated it as an LLM behavioral problem.
 
-The model followed that instruction, but frequently returned several discovery questions in a single response.
-
-That behavior was technically reasonable but created a poor consultation experience.
-
-The prompt was refined with explicit behavioral rules:
+I refined the system instructions to require the consultant to:
 
 - Ask exactly one discovery question at a time
 - Wait for the user's response
 - Build the next question from previous answers
-- Ask a follow-up when information is incomplete
+- Ask follow-up questions when information is incomplete
 - Avoid presenting a questionnaire
 - Delay recommendations until sufficient discovery has occurred
 
-![Prompt iteration](docs/images/prompt-iteration.png)
+![Prompt engineering test results](docs/images/prompt-iteration.png)
 
 ### Behavioral Tests
 
