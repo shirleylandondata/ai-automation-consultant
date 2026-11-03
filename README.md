@@ -446,3 +446,70 @@ Potential future iterations include:
 - Cloud deployment
 
 The current version intentionally stops before these features so the core conversational discovery architecture can remain clear and testable.
+
+
+## AI Workflow Vision Analyzer
+
+The AI Automation Consultant includes an image analysis
+feature that evaluates business workflow diagrams and
+identifies potential automation opportunities.
+
+### Capabilities
+
+- Accepts workflow diagrams in PNG format
+- Encodes images using Base64
+- Uses the OpenAI Vision API for image interpretation
+- Identifies manual tasks and potential bottlenecks
+- Recommends up to three automation opportunities
+- Describes expected business benefits
+- Generates discovery questions
+- Exports assessments to Markdown reports
+
+### How It Works
+
+1. A workflow diagram is loaded from the project.
+2. Python converts the image into Base64.
+3. The image is submitted to an OpenAI vision-capable model.
+4. The model generates a structured business assessment.
+5. The assessment is saved as a Markdown report.
+
+### Run the Vision Analyzer
+
+```powershell
+.\.venv\Scripts\python.exe vision_analyzer.py
+```
+
+### Sample Assessment
+
+- Input: `docs/images/sample_workflow.png`
+- Output: `docs/reports/workflow_assessment.md`
+
+The sample assessment demonstrates how multimodal AI
+can support business process analysis and automation discovery.
+
+
+### Portfolio Demonstration
+
+#### AI Workflow Analysis
+
+The AI Vision Analyzer examines a business workflow
+diagram and recommends practical automation opportunities.
+
+![AI Workflow Analysis](docs/images/vision-analysis-terminal.png)
+
+#### Generated Assessment Report
+
+The application produces a structured business assessment
+covering workflow steps, manual tasks, bottlenecks,
+automation opportunities, and expected benefits.
+
+![Generated Assessment Report](docs/images/workflow-assessment-preview.png)
+
+
+### Technologies
+
+- Python
+- OpenAI API
+- Multimodal AI
+- Base64 image encoding
+- Markdown report generation
