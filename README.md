@@ -1,6 +1,6 @@
 # AI Automation Consultant
 
-A conversational LLM application built with Python and the OpenAI API that helps small and mid-sized businesses identify potential workflow automation opportunities through structured operational discovery.
+**A conversational LLM application built with Python and the OpenAI API that helps small and mid-sized businesses identify potential workflow automation opportunities through structured operational discovery.**
 
 ## For Recruiters and Hiring Managers
 
